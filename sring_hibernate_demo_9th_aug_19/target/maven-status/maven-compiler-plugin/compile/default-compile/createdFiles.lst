@@ -1,0 +1,7 @@
+comm\example\beans\controller\HomeController.class
+comm\example\beans\service\CustomerServiceImpl.class
+comm\example\beans\service\CustomerService.class
+comm\example\beans\dao\CustomerDao.class
+comm\example\beans\controller\CustomerController.class
+comm\example\beans\dao\CustomerDaoImpl.class
+comm\example\beans\entity\Customer.class
