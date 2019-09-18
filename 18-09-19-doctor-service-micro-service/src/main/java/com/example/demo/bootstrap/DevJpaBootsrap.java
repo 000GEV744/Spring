@@ -14,8 +14,6 @@ public class DevJpaBootsrap implements ApplicationListener<ContextRefreshedEvent
 
 	private DoctorRepository docRepo;
 
-	
-
 	public DevJpaBootsrap(DoctorRepository docRepo) {
 		super();
 		this.docRepo = docRepo;
@@ -28,10 +26,12 @@ public class DevJpaBootsrap implements ApplicationListener<ContextRefreshedEvent
 	}
 
 	private void init() {
-		Doctor an = new Doctor("Vikas Malhotra" ,"dehydration");
-		
+		Doctor an = new Doctor("Dr. Anuj Singh", "dehydration");
+		Doctor vik = new Doctor("Dr. Vikram Singh", "dengue");
+		Doctor smi = new Doctor("Dr. Smriti Chaurasia", "dengue");
 		docRepo.save(an);
-	
+        docRepo.save(vik);
+        docRepo.save(smi);
 		
 	}
 }
