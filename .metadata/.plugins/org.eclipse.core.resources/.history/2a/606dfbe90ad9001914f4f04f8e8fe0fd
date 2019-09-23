@@ -1,0 +1,9 @@
+package com.example.demo.entity.service;
+
+import com.example.demo.entity.dto.UserDto;
+
+public interface UserService {
+
+	public UserDto createUser(UserDto userDetails);
+    public UserDto findByid(int id );
+}

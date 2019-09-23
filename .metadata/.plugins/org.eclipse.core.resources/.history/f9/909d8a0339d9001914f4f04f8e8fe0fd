@@ -1,0 +1,37 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.feignClients.PlayerServiceClient;
+import com.example.demo.response.Player;
+
+@RestController
+public class PlayerController {
+	
+
+	@Autowired
+	private PlayerServiceClient playerServiceClient;
+
+	@GetMapping("/fetchplayers")
+	public String getAllplayers(Model m){
+		List<Player> playerList=playerServiceClient.getAllProducts();
+		m.addAttribute("Players", playerList);
+		return "view-player";
+	}
+	
+	@GetMapping("/fetchplayers/{id}")
+	public String getAllplayers(@RequestParam int id, Model m){
+		List<Player> playerList=playerServiceClient.getPlayersById(id);
+		m.addAttribute("Players", playerList);
+		return "view-player";
+	}
+	
+	
+}

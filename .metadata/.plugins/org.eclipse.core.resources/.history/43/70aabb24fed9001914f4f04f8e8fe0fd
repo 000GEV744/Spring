@@ -1,0 +1,51 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.demo.dao.AdjectiveClient;
+import com.example.demo.dao.ArticleClient;
+import com.example.demo.dao.NounClient;
+import com.example.demo.dao.SubjectClient;
+import com.example.demo.dao.VerbClient;
+import com.example.demo.domain.Word;
+
+public class WordServicesImpl implements WordServices {
+
+	@Autowired SubjectClient subjectClient;
+	@Autowired VerbClient verbClient;
+	@Autowired ArticleClient articleClient;
+	@Autowired NounClient nounClient;
+	@Autowired AdjectiveClient adjectiveClient;
+	
+	
+	
+	@Override
+	public Word getSubject() {
+		return subjectClient.getWord();
+	}
+
+	@Override
+	public Word getVerb() {
+		
+		return verbClient.getWord();
+	}
+
+	@Override
+	public Word getArticle() {
+		// TODO Auto-generated method stub
+		return articleClient.getWord();
+	}
+
+	@Override
+	public Word getAdjective() {
+		// TODO Auto-generated method stub
+		return adjectiveClient.getWord();
+	}
+
+	@Override
+	public Word getNoun() {
+		// TODO Auto-generated method stub
+		return nounClient.getWord();
+	}
+
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+</head>
+<body>
+<h3>Soccer League Application</h3>
+<hr>
+To view all the available list of Leagues: 
+<a href="/leagues/list">list Leagues</a>
+
+<hr>
+<br>
+<form th:action="/logout"  method = "post">
+<input type ="submit" value= "Logout"/>
+<form>
+</body>
+</html>

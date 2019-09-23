@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>View Page</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<h2>Description:</h2>
+
+<hr>
+<div class="list-group">
+    <a href="#" class="list-group-item active">Recipe Description</a>
+    <a href="#" class="list-group-item" th:text="${Recipe.cookTime}"></a>
+    <a href="#" class="list-group-item" th:text="${Recipe.description}"></a>
+    <a href="#" class="list-group-item" th:text="${Recipe.difficulty}"></a>
+    <a href="#" class="list-group-item" th:text="${Recipe.direction}"></a>
+    <a href="#" class="list-group-item" th:text="${Recipe.prepTime}"></a>
+    <a href="#" class="list-group-item" th:text="${Recipe.servings}"></a>
+    <a href="#" class="list-group-item" th:text="${Recipe.source}"></a>
+    <a href="#" class="list-group-item" th:text="${Recipe.url}"></a>
+  </div>
+  <br>
+  <hr>
+  <br>
+</body>
+</html>

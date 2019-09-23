@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="spring_demo_formTagLib_6thAug_19"/>
+<aop-project name="spring_demo_4th_aug_19"/>
+<aop-project name="17-09-19-zuul-api-micro-services-1"/>
+<aop-project name="17-09-19-feign-client-micro-service"/>
+<aop-project name="16-09-19-spring-user-server-micro-services"/>
+<aop-project name="18-09-19-common-eureka-micro-service"/>
+<aop-project name="12-09-19-spring-khana-khajana"/>
+<aop-project name="18-09-19-common-server-micro-service"/>
+<aop-project name="spring-h2-inmemory-11-09-19"/>
+<aop-project name="17-09-19-league-service-micro-service-2"/>
+<aop-project name="18-09-19-doctor-service-micro-service"/>
+<aop-project name="spring_javaConfig_demo_5thAug_19"/>
+<aop-project name="spring_form_taglib_6thAug_19"/>
+<aop-project name="16-09-19-spring-gallery-micro-services"/>
+<aop-project name="17-09-19-player-service-micro-service"/>
+<aop-project name="19-09-19-project-development"/>
+<aop-project name="16-09-19-spring-config-microsevices"/>
+<aop-project name="17-09-19-product-service-micro-services-2"/>
+<aop-project name="spring_rest_Demo_9thAug_19"/>
+<aop-project name="16-09-19-spring-image-micro-services"/>
+<aop-project name="11-09-19-spring-boot-mysql-soccer-League"/>
+<aop-project name="13-09-19-spring-Inheritance-Employee-demo"/>
+<aop-project name="20-09-19-user-service-projcet-microservices"/>
+<aop-project name="19-09-19-Spring-Boot-RabbitMQ-Consumer-1"/>
+<aop-project name="23-09-19-eureka-server-project"/>
+<aop-project name="4-09-19-spring_annotation_demo"/>
+<aop-project name="19-09-19-Spring-Boot-RabbitMQ-Producer"/>
+<aop-project name="spring-h2-inmemory-reservation-11-09-19"/>
+<aop-project name="10-09-19-spring-rest-api-demo"/>
+<aop-project name="17-09-19-league-player-mvc-feign"/>
+<aop-project name="spring_JDBCtemplate_demo_5th_aug_19"/>
+<aop-project name="23-09-19-zuul-server-project"/>
+<aop-project name="spring-boot-demo-10-09-19"/>
+<aop-project name="16-09-19-spring-user-service-micro-services"/>
+<aop-project name="18-09-19-sentence-service-micro-service">
+<aspect-definition advice-class-name="com.netflix.hystrix.contrib.javanica.aop.aspectj.HystrixCommandAspect" advice-method-name="methodsAnnotatedWithHystrixCommand(org.aspectj.lang.ProceedingJoinPoint)" advice-type="AROUND" aspect-end-line-number="-1" aspect-name="hystrixCommandAspect" aspect-start-line-number="-1" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/18-09-19-sentence-service-micro-service/src/main/java/com/example/demo/Application.java" pointcut-expression="hystrixCommandAnnotationPointcut() || hystrixCollapserAnnotationPointcut()" proxy-target-class="true">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:18-09-19-sentence-service-micro-service|3:java:com.example.demo.Application|8:wordServicesImpl:15" bean-file="/18-09-19-sentence-service-micro-service/src/main/java/com/example/demo/service/WordServicesImpl.java" bean-start-line="15" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/18-09-19-sentence-service-micro-service/src/main/java/com/example/demo/Application.java" source="=18-09-19-sentence-service-micro-service/C:\/Users\/B4ibmjava09\/.m2\/repository\/com\/netflix\/hystrix\/hystrix-javanica\/1.5.12\/hystrix-javanica-1.5.12.jar&lt;com.netflix.hystrix.contrib.javanica.aop.aspectj(HystrixCommandAspect.class[HystrixCommandAspect~methodsAnnotatedWithHystrixCommand~Lorg.aspectj.lang.ProceedingJoinPoint;" source-start-line="-1" target="=18-09-19-sentence-service-micro-service/src\/main\/java&lt;com.example.demo.service{WordServicesImpl.java[WordServicesImpl~getArticle" target-start-line="39"/>
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:18-09-19-sentence-service-micro-service|3:java:com.example.demo.Application|8:wordServicesImpl:15" bean-file="/18-09-19-sentence-service-micro-service/src/main/java/com/example/demo/service/WordServicesImpl.java" bean-start-line="15" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/18-09-19-sentence-service-micro-service/src/main/java/com/example/demo/Application.java" source="=18-09-19-sentence-service-micro-service/C:\/Users\/B4ibmjava09\/.m2\/repository\/com\/netflix\/hystrix\/hystrix-javanica\/1.5.12\/hystrix-javanica-1.5.12.jar&lt;com.netflix.hystrix.contrib.javanica.aop.aspectj(HystrixCommandAspect.class[HystrixCommandAspect~methodsAnnotatedWithHystrixCommand~Lorg.aspectj.lang.ProceedingJoinPoint;" source-start-line="-1" target="=18-09-19-sentence-service-micro-service/src\/main\/java&lt;com.example.demo.service{WordServicesImpl.java[WordServicesImpl~getSubject" target-start-line="27"/>
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:18-09-19-sentence-service-micro-service|3:java:com.example.demo.Application|8:wordServicesImpl:15" bean-file="/18-09-19-sentence-service-micro-service/src/main/java/com/example/demo/service/WordServicesImpl.java" bean-start-line="15" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/18-09-19-sentence-service-micro-service/src/main/java/com/example/demo/Application.java" source="=18-09-19-sentence-service-micro-service/C:\/Users\/B4ibmjava09\/.m2\/repository\/com\/netflix\/hystrix\/hystrix-javanica\/1.5.12\/hystrix-javanica-1.5.12.jar&lt;com.netflix.hystrix.contrib.javanica.aop.aspectj(HystrixCommandAspect.class[HystrixCommandAspect~methodsAnnotatedWithHystrixCommand~Lorg.aspectj.lang.ProceedingJoinPoint;" source-start-line="-1" target="=18-09-19-sentence-service-micro-service/src\/main\/java&lt;com.example.demo.service{WordServicesImpl.java[WordServicesImpl~getAdjective" target-start-line="46"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="spring_hibernate_demo_9thAug_19"/>
+<aop-project name="18-09-19-doctor-patient-mvc"/>
+<aop-project name="spring_MVC_demo_5thAug_19"/>
+<aop-project name="16-09-19-spring-album-micro-services"/>
+<aop-project name="18-09-19-paitent-service-micro-service"/>
+<aop-project name="16-09-19-spring-client-microsevices"/>
+<aop-project name="18-09-19-word-service-micro-service"/>
+</aop-reference-model>

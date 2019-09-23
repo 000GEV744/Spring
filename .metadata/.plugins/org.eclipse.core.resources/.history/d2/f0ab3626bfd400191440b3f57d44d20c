@@ -1,0 +1,34 @@
+package com.example.springbootmysqlsoccerLeague.services;
+
+import java.util.List;
+
+import com.example.springbootmysqlsoccerLeague.repository.model.League;
+
+public class LeagueServiceImpl  implements LeagueService{
+
+	private Le
+	@Override
+	public List<League> getAllLeague() {
+		
+		return null;
+	}
+
+	@Override
+	public void save(League l) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<League> findById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteById(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

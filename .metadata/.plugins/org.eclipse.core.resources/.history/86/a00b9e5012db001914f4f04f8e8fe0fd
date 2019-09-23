@@ -1,0 +1,17 @@
+package com.example.demo.entity;
+
+import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Category {
+
+	private String CId;
+	private String categoryName;
+	
+	@OneToMany
+	private Set<Product> products;
+	
+}

@@ -1,0 +1,92 @@
+package com.example.demo.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Product {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column( unique = true, nullable = false)
+	private Long id;
+	@Column( unique = true, nullable = false)
+	private String prodcutName;
+	@Column( unique = true, nullable = false)
+	private String productDescription;
+	@Column( unique = true, nullable = false)
+	private String productPrice;
+	@Column( unique = true, nullable = false)
+	private String productQuantity;
+	
+	@ManyToOne
+	private Seller seller;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getProdcutName() {
+		return prodcutName;
+	}
+
+	public void setProdcutName(String prodcutName) {
+		this.prodcutName = prodcutName;
+	}
+
+	public String getProductDescription() {
+		return productDescription;
+	}
+
+	public void setProductDescription(String productDescription) {
+		this.productDescription = productDescription;
+	}
+
+	public String getProductPrice() {
+		return productPrice;
+	}
+
+	public void setProductPrice(String productPrice) {
+		this.productPrice = productPrice;
+	}
+
+	public String getProductQuantity() {
+		return productQuantity;
+	}
+
+	public void setProductQuantity(String productQuantity) {
+		this.productQuantity = productQuantity;
+	}
+
+	public Seller getSeller() {
+		return seller;
+	}
+
+	public void setSeller(Seller seller) {
+		this.seller = seller;
+	}
+
+	public Product() {
+		super();
+	}
+
+	public Product(String prodcutName, String productDescription, String productPrice, String productQuantity) {
+		super();
+		this.prodcutName = prodcutName;
+		this.productDescription = productDescription;
+		this.productPrice = productPrice;
+		this.productQuantity = productQuantity;
+	}
+
+	
+	
+	
+}

@@ -1,0 +1,9 @@
+package com.example.demo.service;
+
+import com.example.demo.modal.Patient;
+
+public interface PatientService {
+
+	
+	public Patient getPatient();
+}

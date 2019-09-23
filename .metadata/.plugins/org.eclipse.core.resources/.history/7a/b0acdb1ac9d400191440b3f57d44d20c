@@ -1,0 +1,53 @@
+package com.example.springbootmysqlsoccerLeague.controller;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.example.springbootmysqlsoccerLeague.repository.model.League;
+import com.example.springbootmysqlsoccerLeague.services.LeagueService;
+
+@Controller
+@RequestMapping("/leagues")
+public class LeagueController {
+
+	private LeagueService leagueService;
+
+	public LeagueController(LeagueService leagueService) {
+		super();
+		this.leagueService = leagueService;
+	}
+	
+	@GetMapping("/list")
+	public String getAllLeagues(Model m) {
+		List<League> leagues=leagueService.getAllLeague();
+		m.addAttribute("Leagues", leagues);
+		return "leagues/list-leagues";
+	}
+	
+	@PostMapping("/showFormForUpdate")
+	public String update(@RequestParam("id") int id, Model m) {
+		League l=leagueService.findById(id);
+		m.addAttribute("updLeague",l);
+		return "leagues/league-update-form";
+	}
+	
+	@PostMapping("/save")
+	public String saveLeague(@ModelAttribute("updLeague") League l) {
+		leagueService.save(l);
+		return "redirect:/leagues/list";
+	}
+	
+	@PostMapping("/delete")
+	public String deleteLeague(@RequestParam("id") int id) {
+		leagueService.deleteById(id);
+		return "redirect:/leagues/list";
+	}
+	
+}

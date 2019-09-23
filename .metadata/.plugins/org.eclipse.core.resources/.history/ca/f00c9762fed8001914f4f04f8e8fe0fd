@@ -1,0 +1,52 @@
+package com.example.demo.entity.service;
+import java.util.Optional;
+
+import org.modelmapper.ModelMapper;
+import org.modelmapper.convention.MatchingStrategies;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.entity.UserEntity;
+import com.example.demo.entity.dto.UserDto;
+import com.example.demo.repository.UserEntityRepository;
+import com.example.springbootmysqlsoccerLeague.repository.model.League;
+
+@Service
+public class UserServiceImpl implements UserService{
+
+	
+	private UserEntityRepository userEntityRepository;
+
+	public UserServiceImpl(UserEntityRepository userEntityRepository) {
+		super();
+		this.userEntityRepository = userEntityRepository;
+	}
+
+
+	@Override
+	public UserDto createUser(UserDto userDetails) {
+		ModelMapper mapper = new ModelMapper();
+		mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+		UserEntity user = mapper.map(userDetails, UserEntity.class);
+		UserDto userDto = mapper.map(user, UserDto.class);
+		userEntityRepository.save(user);
+		return userDto;
+	}
+
+
+
+
+	@Override
+	public UserDto findByid(int id) {
+	    userEntityRepository.findById(id);
+	    Optional<League> result =leagueRepository.findById(id);
+        League l = null ;
+        if(result.isPresent()) {
+        	l=result.get();
+        }
+        return l;
+		return null;
+	}
+
+	
+}

@@ -1,0 +1,56 @@
+package com.example.demo.bootstrap;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationListener;
+import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.stereotype.Component;
+
+import com.example.demo.entity.Product;
+import com.example.demo.entity.Seller;
+import com.example.demo.repository.ProductRepository;
+import com.example.demo.repository.SellerRepository;
+
+@Component
+public class DevJpaBootsrap implements ApplicationListener<ContextRefreshedEvent> {
+
+	@Autowired private ProductRepository proRepo;
+	@Autowired private SellerRepository selrRepo;
+	
+	
+	
+	
+	@Override
+	public void onApplicationEvent(ContextRefreshedEvent event) {
+		init();
+		
+	}
+
+	private void init() {
+		//creating products
+		Product suv = new Product("Mahindra XUV500", "Best suv under your budget", 8000.00, 4);
+		Product bed = new Product("double bed", "Best bed under your budget", 2300.00, 3);
+		Product sofa = new Product("7 seater sofa", "Best sofa under your budget", 2000.00, 7);
+		
+		//creating sellers
+		Seller smriti=new Seller("Smriti", "chaurasia", "smriti@gg.com", "9589342082", "564005", "M.P", "Indore");
+		Set<Product> productsOnSaleBySmriti = new HashSet<Product>();
+		productsOnSaleBySmriti.add(bed);
+		productsOnSaleBySmriti.add(sofa);
+		
+		//creating another seller
+	     Seller anuj= new Seller("Anuj", "Singh", "anuj7gg.com", "9589340302", "486001", "Karnataka", "Banglore");
+	     Set<Product> productsOnSaleByAnuj = new HashSet<Product>();
+	     productsOnSaleByAnuj.add(suv);
+	     productsOnSaleByAnuj.add(sofa);
+	     
+	     anuj.setProducts(productsOnSaleByAnuj);
+	     smriti.setProducts(productsOnSaleBySmriti);
+	     
+	     
+	     
+	}
+}

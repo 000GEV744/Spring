@@ -1,0 +1,26 @@
+package com.example.demo.entity;
+
+public class ResponseDoctor {
+
+	private String name;
+
+	
+	public ResponseDoctor() {
+		super();
+	}
+
+	public ResponseDoctor(String name) {
+		super();
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+}

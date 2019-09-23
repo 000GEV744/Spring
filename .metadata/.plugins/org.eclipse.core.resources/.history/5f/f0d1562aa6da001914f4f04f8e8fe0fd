@@ -1,0 +1,42 @@
+package com.example.demo.entity;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+
+
+@Entity
+public class Seller {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column( unique = true, nullable = false)
+	private Long id;
+	@Column( unique = true, nullable = false)
+	private String  firstName;
+	@Column( unique = true, nullable = false)
+	private String lastName;
+	@Column( unique = true, nullable = false)
+	private String email;
+	@Column( unique = true, nullable = false)
+	private String phoneNumber;
+	@Column( unique = true, nullable = false)
+	private String postalCode;
+	@Column( unique = true, nullable = false)
+	private String state;
+	@Column( unique = true, nullable = false)
+	private String city;
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name = "PRODUCT_ID")
+	private List<Product> products;
+	
+	
+	
+}

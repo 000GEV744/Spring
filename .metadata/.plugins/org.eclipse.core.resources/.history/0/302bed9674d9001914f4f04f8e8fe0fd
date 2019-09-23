@@ -1,0 +1,47 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.entity.Player;
+import com.example.demo.service.PlayerService;
+
+@RestController
+public class PlayerController {
+
+	@Autowired
+	private PlayerService playerServ;
+	
+	@GetMapping("/list")
+	public ResponseEntity < ? > gteAllPlayers(){
+		List<Player> list=playerServ.getAllPlayers();
+		return ResponseEntity.ok(list);
+	}
+	
+	@GetMapping("/delete/{id}")
+	public void deletePlayer(@PathVariable int id) {
+		 playerServ.deletById(id);
+		
+	}
+	
+	@PostMapping("/save")
+	public void savePlayer(@ModelAttribute Player p) {
+		System.out.println(p.getEmail());
+		 playerServ.save(p);
+	}
+	
+	@GetMapping("/find/{id}")
+	public ResponseEntity < ? > findByid(@PathVariable int id) {
+		Player player=playerServ.findById(id);
+		return ResponseEntity.ok(player);
+	}
+	
+	
+}

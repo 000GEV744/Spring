@@ -1,0 +1,12 @@
+package com.example.demo.entity.service;
+
+import java.util.Optional;
+
+import com.example.demo.entity.UserEntity;
+import com.example.demo.entity.dto.UserDto;
+
+public interface UserService {
+
+	public UserDto createUser(UserDto userDetails);
+    public UserDto findByid(int id );
+}

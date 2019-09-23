@@ -1,0 +1,36 @@
+package com.example.demo.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.feignclients.PatientClient;
+import com.example.demo.modal.Patient;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
+@RestController
+public class PatientController {
+
+	private PatientClient patientClient;
+	
+	
+	
+	public PatientController(PatientClient patientClient) {
+		super();
+		this.patientClient = patientClient;
+	}
+
+
+
+	@GetMapping("/fetchpatients/{disease}")
+	@HystrixCommand(fallbackMethod = "getPatientFallBack")
+	public List<Patient> getPatientsByDisease(@PathVariable String disease){
+		return patientClient.getPatient(disease);
+	}
+	
+	
+	
+}

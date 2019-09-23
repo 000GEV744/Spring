@@ -1,0 +1,66 @@
+package com.example.demo.entity;
+
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
+
+@Entity
+public class City {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	@Column(unique = true, nullable = false)
+	private String cityName;
+	
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinTable(name="City_Product", joinColumns = {@JoinColumn(name="City_id" )},
+	inverseJoinColumns = {@JoinColumn(name="Product_Id")}
+	)
+	private Set<Product> product;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getCityName() {
+		return cityName;
+	}
+
+	public void setCityName(String cityName) {
+		this.cityName = cityName;
+	}
+
+	public Set<Product> getProduct() {
+		return product;
+	}
+
+	public void setProduct(Set<Product> product) {
+		this.product = product;
+	}
+
+	public City(String cityName) {
+		super();
+		this.cityName = cityName;
+	}
+
+	public City() {
+		super();
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,8 @@
+package com.example.demo.feignClients;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name = "player-service",url = "http://localhost:8762/api/player")
+public interface PlayerServiceClient {
+
+}

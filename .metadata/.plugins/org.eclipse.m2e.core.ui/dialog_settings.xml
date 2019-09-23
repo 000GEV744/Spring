@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\B4ibmjava09\Downloads\10th-Aug-19-spring-boot-demo"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="ibm.fsd._09_19_spring_rest_api_demo"/>
+			<item value="ibm.fsd.spring_rest_api_demo_10thAug_19"/>
+			<item value="ibm.fsd.spring_rest_crm_10thAug_19"/>
+			<item value="ibm.fsd.spring_rest_crm_10thAg_19"/>
+			<item value="ibm.fsd.spring_rest_Demo_9thAug_19"/>
+			<item value="ibm.fsd.spring_hibernate_demo_9thAug_19"/>
+			<item value="ibm.fsd"/>
+			<item value="ibm.fsd.sring_hibernate_demo_9th_aug_19"/>
+			<item value="ibm.fsd.spring_demo_formTagLib_6thAug_19"/>
+			<item value="ibm.fsd.spring_form_taglib_6thAug_19"/>
+			<item value="ibm.fsd.spring_MVC_demo_5thAug_19"/>
+			<item value="ibm.fsd.spring_javaConfig_demo_5thAug_19"/>
+			<item value="ibm.fsd.spring_"/>
+			<item value="ibm.fsd.spring_JDBCtemplate_demo_5th_aug_19"/>
+			<item value="ibm.fsd.spring_annotation_demo_4th_aug_19"/>
+		</list>
+		<list key="groupId">
+			<item value="ibm.fsd"/>
+		</list>
+		<list key="artifactId">
+			<item value="10-09-19-spring-rest-api-demo"/>
+			<item value="spring-rest-api-demo-10thAug-19"/>
+			<item value="spring_rest_crm_10thAug_19"/>
+			<item value="spring-rest-crm-10thAg-19"/>
+			<item value="spring_rest_Demo_9thAug_19"/>
+			<item value="spring_hibernate_demo_9thAug_19"/>
+			<item value="sring_hibernate_demo_9th_aug_19"/>
+			<item value="spring_demo_formTagLib_6thAug_19"/>
+			<item value="spring_form_taglib_6thAug_19"/>
+			<item value="spring_MVC_demo_5thAug_19"/>
+			<item value="spring_javaConfig_demo_5thAug_19"/>
+			<item value="spring_"/>
+			<item value="spring_JDBCtemplate_demo_5th_aug_19"/>
+			<item value="spring_annotation_demo_4th_aug_19"/>
+			<item value="spring_demo_4th_aug_19"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\B4ibmjava09\Downloads\11-09-19-spring-boot-mysql-soccer-League"/>
+			<item value="C:\Users\B4ibmjava09\Downloads\spring-h2-inmemory-reservation-11-09-19"/>
+			<item value="C:\Users\B4ibmjava09\Downloads\spring-h2-inmemory-11-09-19"/>
+			<item value="C:\Users\B4ibmjava09\Downloads\spring-boot-demo-10-09-19"/>
+			<item value="C:\Users\B4ibmjava09\Downloads\10th-Aug-19-spring-boot-demo"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenCheckoutLocationPage">
+		<list key="scmUrl">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

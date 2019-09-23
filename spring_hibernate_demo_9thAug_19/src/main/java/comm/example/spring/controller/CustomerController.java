@@ -56,14 +56,15 @@ public class CustomerController {
 	
 	@GetMapping("/update")
 	public String updateCustomer(@RequestParam("id") int id,Model m) {
-		m.addAttribute("UCustomer",customerService.findById(id));
+		
+		m.addAttribute("customer",customerService.findById(id));
 		return "customer-update";
 	}
 	
 	@PostMapping("/customerUpdated")
 	public String customerUpdated(@ModelAttribute("customer") Customer c,@RequestParam("id") int id) {
-		customerService.UpdateById(c, id);
-		return null;
+		customerService.UpdateById(new Customer(c.getFirstName(),c.getLastName(),c.getEmail()), id);
+		return "redirect:/customer/list";
 		
 	}
 	

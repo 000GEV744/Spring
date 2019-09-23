@@ -1,0 +1,24 @@
+package com.example.demo.model;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+public class Item {
+
+	private String itemName;
+    private String category;
+    private String description;
+
+	public Item(String itemName, String category, String description) {
+		super();
+		this.itemName = itemName;
+		this.category = category;
+		this.description = description;
+	}
+
+	
+    
+    
+}

@@ -1,0 +1,33 @@
+package com.example.demo.bootstrap;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationListener;
+import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.stereotype.Component;
+
+import com.example.demo.entity.Product;
+import com.example.demo.repository.*;
+
+
+@Component
+public class DevJpaBootsrap implements ApplicationListener<ContextRefreshedEvent> {
+
+	@Autowired private ProductRepository proRepo;
+	
+	
+	
+	
+	
+	@Override
+	public void onApplicationEvent(ContextRefreshedEvent event) {
+		init();
+		
+	}
+
+	private void init() {
+		
+	     Product bed= new Product("Single Bed", "Single Bed Alpha 6X3", 159.00, 837.00, 20.00, 0, 4, "https://www.google.com/imgres?imgurl=https%3A%2F%2Fp.rmjo.in%2FproductSquare%2Feio8igf9-500x500.jpg&imgrefurl=https%3A%2F%2Fwww.rentomojo.com%2Fbangalore%2Ffurniture%2Frent-aurora-single-bed-new&docid=KGFwy5HE6wEjbM&tbnid=Zg_wLu_1vBnEzM%3A&vet=10ahUKEwjtlbOP7NzkAhUo73MBHYOOC7gQMwjkAigeMB4..i&w=500&h=500&bih=677&biw=1600&q=single%20bed&ved=0ahUKEwjtlbOP7NzkAhUo73MBHYOOC7gQMwjkAigeMB4&iact=mrc&uact=8", "C03", "banglore");
+	     proRepo.save(bed);
+	}
+}

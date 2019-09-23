@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;CustomerDao.java&apos; to &apos;sring_hibernate_demo_9th_aug_19/src/main/java/comm.example.beans.dao&apos;&#x0D;&#x0A;- Original project: &apos;spring_MVC_demo_5thAug_19&apos;&#x0D;&#x0A;- Destination element: &apos;sring_hibernate_demo_9th_aug_19/src/main/java/comm.example.beans.dao&apos;&#x0D;&#x0A;- Original element: &apos;CustomerDao.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" destination="=sring_hibernate_demo_9th_aug_19/src\/main\/java&lt;comm.example.beans.dao" element1="CustomerDao.java" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1568014956494" units="0" version="1.0"/>
+</session>

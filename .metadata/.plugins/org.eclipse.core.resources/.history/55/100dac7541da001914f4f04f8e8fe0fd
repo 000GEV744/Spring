@@ -1,0 +1,24 @@
+package com.example.demo.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.feignclients.PatientClient;
+import com.example.demo.modal.Patient;
+
+@Service
+public class PatientServiceImpl implements PatientServices {
+
+	@Autowired
+	private PatientClient patCln;
+	
+	
+	@Override
+	public List<Patient> getPatientByDisease(String disease) {
+		List<Patient> patient=patCln.getPatient(disease);
+		return patient;
+	}
+
+}

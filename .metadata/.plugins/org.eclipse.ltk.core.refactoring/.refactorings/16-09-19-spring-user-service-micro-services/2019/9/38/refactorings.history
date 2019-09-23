@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.example.demo.bootstrap&apos; to &apos;17-09-19-player-service-micro-service/src/main/java/com.example.demo&apos;&#x0D;&#x0A;- Original project: &apos;16-09-19-spring-user-service-micro-services&apos;&#x0D;&#x0A;- Destination element: &apos;17-09-19-player-service-micro-service/src/main/java/com.example.demo&apos;&#x0D;&#x0A;- Original element: &apos;16-09-19-spring-user-service-micro-services/src/main/java/com.example.demo.bootstrap&apos;" description="Copy package" destination="=17-09-19-player-service-micro-service/src\/main\/java&lt;com.example.demo" element1="/src\/main\/java&lt;com.example.demo.bootstrap" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1568712824733" version="1.0"/>
+</session>

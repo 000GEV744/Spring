@@ -1,0 +1,8 @@
+1567752217115	Delete element
+1567752320472	Move compilation units
+1567752589145	Rename type 'EmployeeDao'
+1567752601247	Rename type 'EmployeeDaoImpl'
+1567752741378	Rename type 'EmployeeRowMapper'
+1567753048738	Rename type 'EmployeeServices'
+1567753061656	Rename type 'EmployeeServicesImpl'
+1567759301514	Encapsulate field 'osStr'

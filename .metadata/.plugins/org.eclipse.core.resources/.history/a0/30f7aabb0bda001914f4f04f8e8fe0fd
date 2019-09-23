@@ -1,0 +1,27 @@
+package com.example.demo.entity;
+
+public class RequestPatient {
+
+    private String speciality;
+
+    
+	public RequestPatient() {
+		super();
+	}
+
+	public RequestPatient(String speciality) {
+		super();
+		this.speciality = speciality;
+	}
+
+	public String getSpeciality() {
+		return speciality;
+	}
+
+	public void setSpeciality(String speciality) {
+		this.speciality = speciality;
+	}
+    
+    
+    
+}

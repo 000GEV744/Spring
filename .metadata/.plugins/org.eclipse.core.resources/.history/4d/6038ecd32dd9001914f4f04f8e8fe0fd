@@ -1,0 +1,37 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.entity.Player;
+import com.example.demo.service.PlayerService;
+
+@RestController
+public class PlayerController {
+
+	@Autowired
+	private PlayerService playerServ;
+	
+	@GetMapping("/list")
+	public List<Player> gteAllPlayers(){
+		List<Player> list=playerServ.getAllPlayers();
+		return list;
+	}
+	
+	@GetMapping("/delete/{id}")
+	public String deletePlayer(@PathVariable int id) {
+		 playerServ.deletById(id);
+		return "deleted!";
+	}
+	
+	@GetMapping("/save")
+	public String savePlayers(@ModelAttribute Player p) {
+		 playerServ.save(p);
+		return "svaed!";
+	}
+}

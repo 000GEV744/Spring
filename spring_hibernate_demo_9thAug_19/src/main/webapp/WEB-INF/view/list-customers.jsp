@@ -50,8 +50,8 @@
 						<td> ${tempCustomer.firstName} </td>
 						<td> ${tempCustomer.lastName} </td>
 						<td> ${tempCustomer.email} </td>
-						<td><a href="delete?id=${s.id}">Delete</a></td>
-                        <td><a href="update?id=${s.id}">Update</a></td>
+						<td><a href="delete?id=${tempCustomer.id}">Delete</a></td>
+                        <td><a href="update?id=${tempCustomer.id}">Update</a></td>
 					</tr>
 				
 				</c:forEach>

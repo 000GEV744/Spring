@@ -1,0 +1,9 @@
+package com.example.springbootmysqlsoccerLeague.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.springbootmysqlsoccerLeague.repository.model.League;
+
+public interface LeagueRepository extends JpaRepository<League, Integer> {
+
+}

@@ -1,0 +1,37 @@
+package com.example.demo.entity;
+
+public class DoctorDto {
+
+	
+    private String name;
+    private String speciality;
+ 
+	
+	public DoctorDto() {
+		super();
+	}
+
+	public DoctorDto(String name, String speciality) {
+		super();
+		this.name = name;
+		this.speciality = speciality;
+	}
+
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getSpeciality() {
+		return speciality;
+	}
+	
+	public void setSpeciality(String speciality) {
+		this.speciality = speciality;
+	}
+    
+}

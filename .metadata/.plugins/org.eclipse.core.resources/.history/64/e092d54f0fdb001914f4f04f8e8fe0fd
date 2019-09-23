@@ -1,0 +1,33 @@
+package com.example.demo.bootstrap;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationListener;
+import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.stereotype.Component;
+
+import com.example.demo.entity.Product;
+import com.example.demo.repository.*;
+
+
+@Component
+public class DevJpaBootsrap implements ApplicationListener<ContextRefreshedEvent> {
+
+	@Autowired private ProductRepository proRepo;
+	
+	
+	
+	
+	
+	@Override
+	public void onApplicationEvent(ContextRefreshedEvent event) {
+		init();
+		
+	}
+
+	private void init() {
+		
+	     Product bed= new Product("Single Bed", "Single Bed Alpha 6X3", 159.00, 837.00, 20.00, 0, 4, "https://www.google.com/imgres?", "C03", "banglore");
+	     proRepo.save(bed);
+	}
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+</head>
+<body>
+
+<div class="jumbotron">
+    <h1>Soccer League Application </h1>      
+    <p>This appication allow you to view and Manage all the leagues that are available.</p>
+  </div>
+  <br>
+  List all leagues:
+<a href="leagues/list">List the leagues</a>
+
+<form th:action="/logout"  method = "post">
+<input type ="submit" value= "Logout"/>
+</form>
+</body>
+</html>

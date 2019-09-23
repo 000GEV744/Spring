@@ -1,0 +1,11 @@
+package com.example.demo.service;
+
+import java.util.List;
+
+import com.example.demo.entity.Patient;
+import com.example.demo.entity.ResponsePatient;
+
+public interface PatientService {
+
+	public List<ResponsePatient>  findPatient(String disease);
+}

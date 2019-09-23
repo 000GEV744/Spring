@@ -56,22 +56,22 @@ public class CustomerDaoImpl implements CustomerDao {
 
 	
 	@Transactional
-	public List<Customer> findById(int cId) {
+	public Customer findById(int cId) {
 		Session currentSession = sessionFactory.getCurrentSession();
 		//get the student by its id 
-		Query<Customer> q  = currentSession.createQuery("from Customer where id = :CId", Customer.class);
-		List<Customer> customer = q.getResultList();
+		Customer customer=currentSession.find(Customer.class,cId);
 		return customer;
 	}
 
 	@Transactional
 	public void UpdateById(Customer c,int cId) {
 		Session currentSession = sessionFactory.getCurrentSession();
-		//get the student by its id 
-		Query<Customer> q  = currentSession.createQuery("update Customer set firstName= :fname,lastName= :lname,email= :email ", Customer.class);
+		//updating the student values
+		Query<Customer> q  = currentSession.createQuery("update Customer set firstName= :fname,lastName= :lname,email= :email where id= :id", Customer.class);
 		q.setParameter("fname",c.getFirstName());
 		q.setParameter("lname",c.getLastName());
-		q.setParameter("email", c.getEmail());
+		q.setParameter("email",c.getEmail());
+		q.setParameter("id",cId);
 		q.executeUpdate();
 	
 	}

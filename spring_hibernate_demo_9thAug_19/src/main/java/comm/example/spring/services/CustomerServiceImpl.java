@@ -40,7 +40,7 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Transactional
-	public List<Customer> findById(int cId) {
+	public Customer findById(int cId) {
 		return customerDAO.findById(cId);
 	}
 

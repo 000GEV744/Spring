@@ -1,0 +1,15 @@
+spring.application.name=zuul-service
+server.port=8762
+eureka.client.service-url.default-zone =http://localhost:8761/eureka
+zuul.prefix=/api
+zuul.ignored-services=*
+zuul.routes.gallery-service.path=/gallery/**
+zuul.routes.gallery-service.service-id=gallery-service
+zuul.routes.image-service.path=/image/**
+zuul.routes.image-service.service-id=image-service
+zuul.routes.product-service.service-id=product-service
+zuul.routes.product-service.path=/product/**
+zuul.routes.feign-app.service-id=feign-app
+zuul.routes.feign-app.path=/feign/**
+zuul.routes.player-service.service-id=player-service
+zuul.routes.player-service.path=/players/**

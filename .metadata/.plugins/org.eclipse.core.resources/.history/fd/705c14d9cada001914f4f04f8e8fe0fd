@@ -1,0 +1,151 @@
+package com.example.demo.entity;
+
+
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+
+
+@Entity
+public class Seller {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column( unique = true, nullable = false)
+	private Long id;
+	@Column( unique = true, nullable = false)
+	private String  firstName;
+	@Column( unique = true, nullable = false)
+	private String lastName;
+	@Column( unique = true, nullable = false)
+	private String email;
+	@Column( unique = true, nullable = false)
+	private String phoneNumber;
+	@Column( unique = true, nullable = false)
+	private String postalCode;
+	@Column( unique = true, nullable = false)
+	private String state;
+	@Column( unique = true, nullable = false)
+	private String city;
+	
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name = "PRODUCT_ID")
+	private Set<Product> products;
+	
+	
+	public Seller(String firstName, String lastName, String email, String phoneNumber, String postalCode, String state,
+			String city) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+		this.postalCode = postalCode;
+		this.state = state;
+		this.city = city;
+	}
+
+
+	public Seller() {
+		super();
+	}
+
+
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+
+	public String getLastName() {
+		return lastName;
+	}
+
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+
+	public String getPostalCode() {
+		return postalCode;
+	}
+
+
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
+	}
+
+
+	public String getState() {
+		return state;
+	}
+
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+
+	public String getCity() {
+		return city;
+	}
+
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+
+	public Set<Product> getProducts() {
+		return products;
+	}
+
+
+	public void setProducts(Set<Product> products) {
+		this.products = products;
+	}
+	
+	
+}

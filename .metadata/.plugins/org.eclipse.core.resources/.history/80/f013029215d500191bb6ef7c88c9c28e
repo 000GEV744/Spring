@@ -1,0 +1,67 @@
+package com.example.springbootmysqlsoccerLeague.repository.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.*;
+
+
+
+@Entity
+public class League  {
+    
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;;
+	private String title;
+	private String season;
+	private int leagueYear;
+	
+	
+	public League() {
+		super();
+	}
+	
+	public League(String title, String season, int leagueYear) {
+		super();
+		this.title = title;
+		this.season = season;
+		this.leagueYear = leagueYear;
+	}
+	
+	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+	
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	public String getSeason() {
+		return season;
+	}
+	
+	public void setSeason(String season) {
+		this.season = season;
+	}
+	
+	public int getYear() {
+		return leagueYear;
+	}
+	
+	public void setYear(int leagueYear) {
+		this.leagueYear = leagueYear;
+	}
+	
+	
+	
+}

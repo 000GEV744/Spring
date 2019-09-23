@@ -1,0 +1,27 @@
+package com.example.demo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.example.demo.data.Gallery;
+import com.sun.xml.bind.v2.schemagen.xmlschema.List;
+
+@RestController
+public class GalleryController {
+
+	@Autowired
+	@LoadBalanced
+	private RestTemplate restTemplate;
+	
+	@RequestMapping("/{id}")
+	public Gallery createGallery() {
+		Gallery gellery= new Gallery(@PathVariable Long id);
+		gellery.setGalleryId(1L);
+		List<Object> list= restTemplate.getForObject("http://image-service/images", List.class);
+	}
+	
+}

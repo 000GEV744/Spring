@@ -1,0 +1,12 @@
+package com.example.demo.services;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.example.demo.modal.Patient;
+
+public interface PatientServices {
+
+	public List<Patient> getPatientByDisease(String disease);
+}

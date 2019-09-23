@@ -12,6 +12,6 @@ public interface CustomerService {
 	public void saveCustomer(Customer theCustomer);
 	public void UpdateById(Customer c,int cId);
 
-	public List<Customer> findById(int cId);
+	public Customer findById(int cId);
 }
 
